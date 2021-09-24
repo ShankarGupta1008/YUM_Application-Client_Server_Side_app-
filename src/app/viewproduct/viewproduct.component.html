@@ -1,0 +1,32 @@
+<nav class="navbar" style="background-color: #C1FFD7;" >
+  <a class="navbar-brand">
+    <img src="https://img.icons8.com/cute-clipart/64/000000/kawaii-french-fries.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        View
+  </a>
+  <li class="nav-item nav justify-content-end">
+    <a class="nav-link" href="#">Logout</a>
+  </li>
+</nav>
+<table class="table table-striped st">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Date of Launch</th>
+        <th>Delivery</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{menu.id}}</td>
+        <td>{{menu.name}}</td>
+        <td>{{menu.category}}</td>
+        <td>{{menu.launch}}</td>
+        <td>{{menu.delivery}}</td>
+        <td>{{menu.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" style="margin-left: 600px" (click)="goToList()">Back</button>

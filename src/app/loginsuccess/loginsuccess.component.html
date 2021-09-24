@@ -1,0 +1,43 @@
+<nav class="navbar" style="background-color: #C1FFD7;" >
+  <a class="navbar-brand" href="#">
+    <img src="https://img.icons8.com/cute-clipart/64/000000/kawaii-french-fries.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Menu Items
+  </a>
+  <li class="nav-item nav justify-content-end">
+    <a class="nav-link" href="#">Logout</a>
+  </li>
+</nav>
+
+<br>
+
+<div class="panel panel-primary st">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Delivery</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mi of menu | async">
+            <td>{{mi.id}}</td>
+            <td>{{mi.name}}</td>
+            <td>{{mi.category}}</td>
+            <td>{{mi.delivery}}</td>
+            <td>{{mi.price}}</td>
+            <td>
+                <button (click)="menuDetails(mi)" class="btn btn-info" style="margin-left: 10px; background-color: #FF5C58;">Add To Cart</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button  (click)="cartDetails()" class="btn btn-info" style="margin-left: 500px; background-color: #5C7AEA;">View Cart Items</button>
+    </div>
+  </div>

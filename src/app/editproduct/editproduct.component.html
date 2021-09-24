@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Edit Menu</h2>
+
+    <form #adduserform="ngForm" (ngSubmit)="updateProductformsubmit()">
+        {{menu | json}}
+
+        <div class="form-group">
+            <label for="id">Id</label>
+            <input type="number" class="form-control" required [(ngModel)]="menu.id" disabled name="id">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" class="form-control" required [(ngModel)]="menu.category" name="category">
+        </div>
+        <div class="form-group">
+            <label for="delivery">Delivery</label>
+            <input type="text" class="form-control" required [(ngModel)]="menu.delivery" name="delivery">
+        </div>
+        <div class="form-group">
+            <label for="launch">Date of Launch</label>
+            <input type="date" class="form-control" required [(ngModel)]="menu.launch" name="launch">
+        </div>
+        <div class="form-group">
+            <label for="name">Item Name</label>
+            <input type="text" class="form-control" required [(ngModel)]="menu.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price of Item</label>
+            <input type="number" class="form-control" required [(ngModel)]="menu.price" name="price">
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-primary" (click)="goToList()">Back</button>
+    </form>
+</div>
+

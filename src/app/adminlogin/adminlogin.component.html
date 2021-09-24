@@ -1,0 +1,46 @@
+<nav class="navbar" style="background-color: #C1FFD7;" >
+  <a class="navbar-brand" href="#">
+    <img src="https://img.icons8.com/cute-clipart/64/000000/kawaii-french-fries.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Admin Login :- Menu Items
+  </a>
+  <li class="nav-item nav justify-content-end">
+    <a class="nav-link" href="#">Logout</a>
+  </li>
+</nav>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Crud Operation are Available.</h4> 
+    </div>
+    <div class="panel-body tbl">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Date of Launch</th>
+            <th>Delivery</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mi of menu | async">
+            <td>{{mi.id}}</td>
+            <td>{{mi.name}}</td>
+            <td>{{mi.category}}</td>
+            <td>{{mi.launch}}</td>
+            <td>{{mi.delivery}}</td>
+            <td>{{mi.price}}</td>
+            <td>
+                <button type="button" (click)="goToEditProduct(mi.id)" class="btn btn-primary">Edit</button>&nbsp;&nbsp;
+                <button type="button" (click)="goToViewProduct(mi.id)" class="btn btn-info">View</button>&nbsp;&nbsp;
+                <button type="button" (click)="deleteProduct(mi.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" (click)="goToAddProduct()" style="margin-left: 600px" class="btn btn-success">Add Item</button>
+    </div>
+  </div>

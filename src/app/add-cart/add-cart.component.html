@@ -1,0 +1,55 @@
+<nav class="navbar" style="background-color: #C1FFD7;" >
+  <a class="navbar-brand" href="#">
+    <img src="https://img.icons8.com/cute-clipart/64/000000/kawaii-french-fries.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Menu Items
+  </a>
+  <li class="nav-item nav justify-content-end">
+    <a class="nav-link" href="#">Logout</a>
+  </li>
+</nav>
+
+<br>
+
+<div class="panel panel-primary st">
+    <div class="panel-heading">
+      <h1>Cart Item:- Menu List</h1>
+    </div>
+    <div class="panel-body tbl">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Id</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartItem of cart | async ; let c=index">
+            <!--<td>{{cartItem.cartId}}</td>-->
+            <td >{{c}}</td>
+            <td>{{cartItem.id}}</td>
+            <td>{{cartItem.itemName}}</td>
+            <td>{{cartItem.price}}</td>
+            <td>
+              <button type="button" (click)="remove(cartItem.cartId)" class="btn btn-info" style="background-color: #B1E693;" >Remove From Cart</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+    </div>
+
+  </div>
+  
+    <!--<h2  [(ngModel)]="totalPrice" name="totalPrice" style="color: #A12568;">Total Amount to be paid is : {{totalPrice}}</h2>-->
+    <div class="container">
+      <h1 [(ngModel)]="totalPrice" ngDefaultControl name="price" >Total Amount to be paid:
+      {{totalPrice}}</h1>
+      </div>
+      <div>
+      <button type="button" (click)="back()" style="margin-left: 600px" class="btn btn-success">Back</button>
+  </div>
+

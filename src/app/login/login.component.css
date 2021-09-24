@@ -1,0 +1,18 @@
+.he{
+    padding: 30px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, sans-serif;
+    font-size: 5em;
+    letter-spacing: -2px;
+}
+.b1{
+    margin: 10px;
+}
+.rh{
+    position: relative;
+    left: 150px;
+    top: -45px;
+}

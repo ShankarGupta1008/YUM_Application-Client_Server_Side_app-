@@ -1,0 +1,25 @@
+<br>
+<br>
+<div class="container">
+    <h1 class="he">Welcome to Yum</h1>
+    <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+        <h1>Register here</h1>
+        <div class="form-group" >
+            <label for="exampleInputName">User Name</label>
+            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Enter your name" name="username" [(ngModel)]="user.userName" >
+        </div>
+        <br>
+        <div class="form-group" >
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="user.emailId">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.password">
+        </div>
+        <button type="submit" class="btn btn-info b1">Register</button>
+      </form>
+      <small class="float-right btextual" [routerLink]="['/login']">Login here</small>
+</div>
